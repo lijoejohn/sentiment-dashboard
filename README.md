@@ -12,19 +12,25 @@ A React-based interactive dashboard for visualizing global sentiment analysis da
 - Responsive UI styled with TailwindCSS
 - Lazy loading for map components to improve performance
 
+## p95 dashboard latency to interactions 
+
+Please see the attached video to check the latency
+[TBI - Global Sentiment Analysis.webm](https://github.com/user-attachments/assets/eb4a0017-2243-4edb-bab8-2d811e43dc8f)
+
+
 ---
 
 ## To Do Non-functional requirements 
 - Unit test
-- Type script support
+- TypeScript support
 - 
 
 ## To Do Pending Features
-- Loading all countries map data
+- Loading all countries' map data
 - Filter data by Regions
 - Loader for Summary Table
 - p95 matrix
-- On Region selection Zoom and selection UI in map
+- On Region selection, Zoom and selection UI in map
 
 
 ## Technologies & Packages Used
