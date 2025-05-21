@@ -14,6 +14,11 @@ A React-based interactive dashboard for visualizing global sentiment analysis da
 
 ---
 
+## To Do Non-functional requirements 
+- Unit test
+- Type script support
+- 
+
 ## To Do Pending Features
 - Loading all countries map data
 - Filter data by Regions
