@@ -20,7 +20,6 @@ export function useMapData(filters) {
   }, []);
 
   const filteredData =  useMemo(() => {
-    console.log(filters.country)
     return geoData.filter((item) => {
       const matchesCountry = filters.country !=='All' ? item.Country === filters.country : true;
       const matchesValue =

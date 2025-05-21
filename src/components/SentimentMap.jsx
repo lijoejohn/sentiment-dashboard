@@ -40,13 +40,16 @@ const countryGeodataMap = {
 
 const getSentimentText = (value) => {
   switch (value) {
-    case 2: return "Sentiment: Positive";
-    case 1: return "Sentiment: Neutral";
-    case 0: return "Sentiment: Negative";
-    default: return "No Data";
+    case 2:
+      return "Sentiment: Positive";
+    case 1:
+      return "Sentiment: Neutral";
+    case 0:
+      return "Sentiment: Negative";
+    default:
+      return "No Data";
   }
 };
-
 
 const SentimentMap = ({ geoData, onclick }) => {
   const chartRef = useRef(null);
@@ -88,9 +91,10 @@ const SentimentMap = ({ geoData, onclick }) => {
       );
 
       series.mapPolygons.template.events.on("click", (ev) => {
+        performance.mark("map-click-start");
         const data = ev.target?.dataItem?.dataContext;
-        const countryData = geoData.filter(d => d.Country === countryName);
-        const regionData = countryData.find(d => d.Region === data?.name);
+        const countryData = geoData.filter((d) => d.Country === countryName);
+        const regionData = countryData.find((d) => d.Region === data?.name);
         onclick(regionData, countryData);
       });
 
@@ -119,8 +123,9 @@ const SentimentMap = ({ geoData, onclick }) => {
     };
   }, [geoDataLookup, onclick, geoData]);
 
-  return <div id={idRef.current} style={{ width: "100%", height: "500px" }}></div>;
+  return (
+    <div id={idRef.current} style={{ width: "100%", height: "500px" }}></div>
+  );
 };
-
 
 export default SentimentMap;

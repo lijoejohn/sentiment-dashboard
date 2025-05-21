@@ -1,6 +1,20 @@
+import { useEffect } from "react";
+
 export const SummaryTable = ({ data }) => {
-  if (!data.length)
-    return <p>Click on the Regions to get the summary</p>;
+  useEffect(() => {
+    if (data.length) {
+      performance.mark("table-rendered");
+      performance.measure(
+        "MapClickToTableRender",
+        "map-click-start",
+        "table-rendered"
+      );
+      const measure = performance.getEntriesByName("MapClickToTableRender")[0];
+      console.log(`⏱️ Table load time: ${measure.duration.toFixed(2)} ms`);
+    }
+  }, [data]);
+
+  if (!data.length) return <p>Click on the Regions to get the summary</p>;
 
   return (
     <>
