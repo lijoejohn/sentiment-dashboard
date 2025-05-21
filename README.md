@@ -14,6 +14,14 @@ A React-based interactive dashboard for visualizing global sentiment analysis da
 
 ---
 
+## To Do Pending Features
+- Loading all countries map data
+- Filter data by Regions
+- Loader for Summary Table
+- p95 matrix
+- On Region selection Zoom and selection UI in map
+
+
 ## Technologies & Packages Used
 
 ### Core Dependencies
@@ -50,3 +58,18 @@ A React-based interactive dashboard for visualizing global sentiment analysis da
 
    ```bash
    npm install
+
+2. **Start development server**
+
+   ```bash
+   npm run dev
+
+3. **Build for production**
+
+   ```bash
+   npm run build
+
+3. **Preview production build**
+
+   ```bash
+   npm run preview
